@@ -1,0 +1,23 @@
+{
+  "name": "date_lecture",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Kennethjames237/Javascript-and-React#readme",
+  "bugs": {
+    "url": "https://github.com/Kennethjames237/Javascript-and-React/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kennethjames237/Javascript-and-React.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "Dates.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.21"
+  }
+}
