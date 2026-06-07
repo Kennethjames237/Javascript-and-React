@@ -10,16 +10,26 @@ for(let i = 0 ; i < list_names.length; i++){
 }
 */
 
+/*
 const list_2 = [];
 
 for(const name of list_names){
     list_2.push(name.trim());
 }
+  */
 
+
+
+ const list_2 = list_names.map( element => element.trim());
+
+ /*
 const list_3 = [];
 for(const name of list_2){
     list_3.push(name.split(" "));
 }
+    */
+
+const list_3 = list_2.map(element => element.split(" "));
 
 const acron = [];
 

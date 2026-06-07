@@ -4,6 +4,10 @@
 /* let , const*/
 
 const scores = [3, -2, 10, 0, -5, -8, 7, 4, -1, 9, 6];
+/* 
+//This below can be done just buy using a callback function and a filter 
+//A CALLBACK function is a function in a function
+//that is a function that returns another function
 const newscores = [];
 
 scores.forEach(element => {
@@ -11,6 +15,11 @@ scores.forEach(element => {
         newscores.push(element);
     }
 });
+*/
+// can also be done like this for comprendion 
+// const newscores = scores.filter( element => {return (element >= 0)})
+const newscores = scores.filter( element => element >= 0 )
+console.log(newscores);
 
 for (const c of [1, 2]) {
     const smallest = Math.min(...newscores);
@@ -19,11 +28,13 @@ for (const c of [1, 2]) {
     newscores.splice(index, 1);
 }
 
-let avg = 0.0;
+//let avg = 0.0;
 
-for(const value of newscores){
-    avg +=value;
-}
+//for(const value of newscores){
+ //   avg +=value;
+//}
+
+let avg = newscores.reduce((sum, element) => (sum+element), 0);
 
 avg /= newscores.length;
 
