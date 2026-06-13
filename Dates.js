@@ -25,14 +25,14 @@ console.log(dayjs());
 
 import dayjs from 'dayjs';
 
-function Answer(text, userId, date, score=0){
+export function Answer(text, userId, date, score=0){
     this.text = text;
     this.userId = userId;
     this.date = dayjs(date);
     this.score = score;
 }
 
-function Question(text, userId, date){
+export function Question(text, userId, date){
     this.text =text;
     this.userId =userId;
     this.date = dayjs(date);
@@ -53,6 +53,10 @@ function Question(text, userId, date){
         });
         return result;
     }
+    //to get all answers 
+    this.getAllAnswers = () => {
+        return this.answers;
+    }
 
     this.afterDate = (date) => {
         const result = [];
@@ -66,35 +70,36 @@ function Question(text, userId, date){
 
 }
 
-const q1 = new Question("How long is this exercise?", 1, "2026-02-27");
-console.log(q1);
+// const q1 = new Question("How long is this exercise?", 1, "2026-02-27");
+// console.log(q1);
 
-const a1 = new Answer("too much by 2", 2, "2026-02-27");
-const a2 = new Answer("10 minutes", 3, "2026-02-27");
-const a3 = new Answer("15 minutes", 2, "2026-02-27");
-const a4 = new Answer("30 minutes", 2, "2026-02-26");
-
-
-q1.addAnswer(a1);
-q1.addAnswer(a2);
-q1.addAnswer(a3);
-
-console.log(q1);
-
-console.log("------getAnswer----------");
-const user2a = q1.getAnswer(2)
-
-console.log(user2a);
-
-console.log("------afterDate----------");
-
-const yesterday = dayjs("2026-02-26");
-
-const answersAfteryesterday = q1.afterDate(yesterday);
-
-console.log(answersAfteryesterday);
+// const a1 = new Answer("too much by 2", 2, "2026-02-27");
+// const a2 = new Answer("10 minutes", 3, "2026-02-27");
+// const a3 = new Answer("15 minutes", 2, "2026-02-27");
+// const a4 = new Answer("30 minutes", 2, "2026-02-26");
 
 
+// q1.addAnswer(a1);
+// q1.addAnswer(a2);
+// q1.addAnswer(a3);
+
+// console.log(q1);
+
+// console.log("------getAnswer----------");
+// const user2a = q1.getAnswer(2)
+
+// console.log(user2a);
+
+// console.log("------afterDate----------");
+
+// const yesterday = dayjs("2026-02-26");
+
+// const answersAfteryesterday = q1.afterDate(yesterday);
+
+// console.log(answersAfteryesterday);
 
 
-console.log();
+
+
+// console.log();
+
